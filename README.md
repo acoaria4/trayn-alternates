@@ -86,3 +86,7 @@ To reproduce project-path hosting locally, build with PUBLIC_SITE_URL set to `ht
 The header uses a created outlined NURTURE wordmark above a smaller flat TRAYN Nutrition endorsement. Mobile uses dedicated generated 360/720px product images, native scrolling, larger reading/touch sizes, an exploration link before the product, and a complete endorsement even at 320px. Exact generation prompts and native wordmark source are recorded under assets/. The closed lightbox defers its full-size image until it opens; initial header geometry is reserved while hydration loads, with native navigation restored if the bundle fails.
 
 The source/assets/lockfiles remain tracked; dependencies, build outputs, browser caches, local reports, logs and Python bytecode are ignored. The former archive has been deleted after independence checks.
+
+## Product development documents
+
+The [product development folder](docs/product-development/README.md) contains the detailed food-product discussion and links to the versioned, three-page [food technologist review PDF](output/pdf/nurture-food-technologist-review-brief.pdf), with regeneration instructions. These are concept review materials separate from the website.
