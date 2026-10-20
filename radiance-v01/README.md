@@ -26,8 +26,14 @@ npm run verify:radiance
 
 GSAP and ScrollTrigger handle the entrance and one-time heading reveals. Lenis is the sole smooth-scroll engine, active only on fine-pointer desktop devices without reduced motion. Touch and reduced motion use native scrolling. No Three.js runtime is needed.
 
+The opening coordinates a subtle desktop photograph zoom, two headline lines and supporting copy/button in one timeline. A small desktop-only image drift within the existing ritual frame adds photographic depth; no sections are pinned or snapped and section dimensions are unchanged. Mobile uses shorter, smaller reveals with static photographs. FAQ toggles and image loads refresh measured scroll positions.
+
+Packaging photographs decode before replacing the current image. Pointer selections crossfade in 200 ms, while keyboard selections update without a transition. Stale image requests cannot override a newer selection; failed images have a readable fallback. Reduced-motion changes remove scroll effects and finish any in-progress image transition. Hover motion is limited to fine pointers.
+
 Packaging tabs support pointer, touch, arrow keys, Home and End, with recovery for failed images. Mobile navigation and FAQs use native details/summary. Without JavaScript or when the application bundle fails, the full story and navigation remain usable; direct image links replace enhanced controls.
 
 `npm run verify:pages` covers the GitHub Pages project path, including Radiance at `/trayn-alternates/radiance-v01/`. Set `PUBLIC_SITE_URL` to the picker deployment URL before building. `RADIANCE_URL` overrides the browser test target; `BROWSER_EXECUTABLE` selects an installed Chromium or Edge.
 
 For lifecycle verification, start a development server on port 4181 and run `node scripts/verify-radiance.mjs --dev`. Reports and screenshots are ignored under `verification/radiance*/`.
+
+Run `node scripts/verify-radiance-motion.mjs` against the production preview to check delayed images, rapid selection, keyboard behaviour, desktop image depth, mobile/reduced-motion alternatives and free scrolling. The same `RADIANCE_URL` and `BROWSER_EXECUTABLE` overrides apply.

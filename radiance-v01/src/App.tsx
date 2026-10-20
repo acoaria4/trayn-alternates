@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type KeyboardEvent } from 'react';
 import { gsap } from 'gsap';
 import { radiance } from './content';
 import { useRadianceMotion } from './motion';
+import { DetailMedia } from './DetailMedia';
 
 function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return <img src={`./assets/icons/arrow-${diagonal ? 'up-right' : 'right'}.svg`} width="20" height="20" alt="" aria-hidden="true" />;
@@ -26,9 +27,9 @@ export default function App() {
   const root = useRef<HTMLDivElement>(null);
   const menu = useRef<HTMLDetailsElement>(null);
   const [selected, setSelected] = useState(0);
-  const [mediaFailed, setMediaFailed] = useState(false);
+  const [tabInput, setTabInput] = useState<'pointer' | 'keyboard'>('keyboard');
   const [enhanced, setEnhanced] = useState(false);
-  const detailImage = useRef<HTMLImageElement>(null);
+  const detailDescription = useRef<HTMLDivElement>(null);
   const current = radiance.details[selected];
   useRadianceMotion(root);
 
@@ -46,18 +47,25 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches || !detailImage.current) return;
-    const tween = gsap.fromTo(detailImage.current, { opacity: .65, y: 12 }, { opacity: 1, y: 0, duration: .55, ease: 'power2.out', clearProps: 'all' });
-    return () => { tween.revert(); };
-  }, [selected]);
+    if (tabInput === 'keyboard' || !detailDescription.current) return;
+    const media = gsap.matchMedia();
+    media.add('(prefers-reduced-motion: no-preference)', () => {
+      gsap.fromTo(detailDescription.current, { opacity: .75 }, { opacity: 1, duration: .2, ease: 'power2.out', clearProps: 'opacity' });
+    });
+    return () => media.revert();
+  }, [selected, tabInput]);
 
-  function choose(index: number) { setSelected(index); setMediaFailed(false); }
+  function choose(index: number, animate = true) {
+    if (index === selected) return;
+    setTabInput(animate ? 'pointer' : 'keyboard');
+    setSelected(index);
+  }
   function detailKey(event: KeyboardEvent<HTMLButtonElement>, index: number) {
     const keys = ['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Home', 'End'];
     if (!keys.includes(event.key)) return;
     event.preventDefault();
     const next = event.key === 'Home' ? 0 : event.key === 'End' ? radiance.details.length - 1 : (index + (['ArrowRight', 'ArrowDown'].includes(event.key) ? 1 : -1) + radiance.details.length) % radiance.details.length;
-    choose(next);
+    choose(next, false);
     document.getElementById(`rd-tab-${radiance.details[next].id}`)?.focus();
   }
 
@@ -77,7 +85,7 @@ export default function App() {
     </header>
 
     <main id="main" tabIndex={-1}>
-      <section className="rd-hero" id="top" aria-labelledby="rd-hero-label">
+      <section className="rd-hero" id="top" tabIndex={-1} aria-labelledby="rd-hero-label">
         <picture className="rd-hero-media">
           <source media="(max-width: 700px)" srcSet="./assets/product/packaging-600.webp 600w, ./assets/product/packaging.webp 1000w" sizes="100vw" />
           <img src="./assets/product/hero.webp" srcSet="./assets/product/hero-1000.webp 1000w, ./assets/product/hero.webp 1800w" sizes="100vw" width="1800" height="1125" alt="Generated Radiance Cafe Latte concept tin and a ceramic coffee cup in warm morning sunlight." fetchPriority="high" />
@@ -120,16 +128,13 @@ export default function App() {
             <p className="rd-eyebrow" data-reveal>Thoughtfully imagined, inside & out</p>
             <Heading text={'Beauty in\nthe little things.'} />
             <p className="rd-body" data-reveal>Warm ivory. A touch of gold. A name with a little life. Discover the small details that make Radiance feel like Radiance.</p>
-            <div className="rd-tabs" hidden={!enhanced} role={enhanced ? 'tablist' : undefined} aria-orientation={enhanced ? 'vertical' : undefined} aria-label="Explore the Radiance packaging">
-              {radiance.details.map((detail, index) => <button type="button" key={detail.id} id={`rd-tab-${detail.id}`} role={enhanced ? 'tab' : undefined} aria-selected={enhanced ? selected === index : undefined} aria-controls={enhanced ? 'rd-detail-panel' : undefined} tabIndex={enhanced && selected !== index ? -1 : 0} onKeyDown={event => detailKey(event, index)} onClick={() => choose(index)} className={selected === index ? 'is-selected' : ''}><span className="rd-tab-number">0{index + 1}</span>{detail.label}<span className="rd-tab-arrow"><Arrow diagonal /></span></button>)}
+            <div className="rd-tabs" data-input={tabInput} hidden={!enhanced} role={enhanced ? 'tablist' : undefined} aria-orientation={enhanced ? 'vertical' : undefined} aria-label="Explore the Radiance packaging">
+              {radiance.details.map((detail, index) => <button type="button" key={detail.id} id={`rd-tab-${detail.id}`} role={enhanced ? 'tab' : undefined} aria-selected={enhanced ? selected === index : undefined} aria-controls={enhanced ? 'rd-detail-panel' : undefined} tabIndex={enhanced && selected !== index ? -1 : 0} onKeyDown={event => detailKey(event, index)} onClick={event => choose(index, event.detail !== 0)} className={selected === index ? 'is-selected' : ''}><span className="rd-tab-number">0{index + 1}</span><span className="rd-tab-label">{detail.label}</span><span className="rd-tab-arrow"><Arrow diagonal /></span></button>)}
             </div>
-            <div className="rd-detail-description" aria-live="polite"><h3>{current.title}</h3><p>{current.text}</p></div>
+            <div className="rd-detail-description" ref={detailDescription} aria-live="polite"><h3>{current.title}</h3><p>{current.text}</p></div>
             <p className="rd-detail-disclosure">Generated packaging study. Final artwork may evolve.</p>
           </div>
-          <div className="rd-detail-frame" id="rd-detail-panel" role={enhanced ? 'tabpanel' : undefined} aria-labelledby={enhanced ? `rd-tab-${current.id}` : undefined} tabIndex={enhanced ? 0 : undefined}>
-            {mediaFailed ? <div className="rd-media-error" role="status"><p>This detail could not be loaded.</p><a href="./assets/product/packaging.webp">Open the packaging image</a></div> : <img ref={detailImage} key={current.id} src={current.image} width="1000" height="1500" loading="lazy" alt={current.alt} onError={() => setMediaFailed(true)} />}
-            <span className="rd-detail-caption">RADIANCE <span>CAFE LATTE / CONCEPT 02</span></span>
-          </div>
+          <DetailMedia selected={selected} animate={tabInput === 'pointer'} enhanced={enhanced} />
           <noscript><div className="rd-no-js-details">Explore the photographs: <a href="./assets/product/detail.webp">The embossed sunburst</a><a href="./assets/product/ritual.webp">The morning ritual</a></div></noscript>
         </div>
       </section>

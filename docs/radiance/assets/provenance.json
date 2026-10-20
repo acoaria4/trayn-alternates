@@ -38,7 +38,7 @@
       "Development FAQs",
       "Closing"
     ],
-    "motion": "GSAP + ScrollTrigger; Lenis only on fine-pointer desktop; native scroll on touch and under reduced motion",
+    "motion": "GSAP opening choreography and one-time reveals; ScrollTrigger photograph depth on fine-pointer desktop; Lenis desktop scrolling; decoded packaging crossfades for pointer input; immediate keyboard selections; native touch and reduced-motion scrolling",
     "threeJs": "Not used; photography provides the material depth.",
     "signature": "Keyboard-accessible detail tabs with whole tin, embossed label and morning ritual."
   }

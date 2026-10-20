@@ -24,6 +24,10 @@ try {
     await page.goto(base, { waitUntil: 'networkidle' }); await ready(page);
     const before = await page.evaluate(() => window.__radianceDev.stats());
     assert(before.triggers > 0); assert.equal(before.lenisTickers, 1);
+    assert.equal(typeof before.closingTriggerStart, 'number');
+    await page.locator('.rd-faq details').evaluateAll(items => items.forEach(item => { item.open = true; }));
+    await page.waitForFunction(start => window.__radianceDev.stats().closingTriggerStart > start + 100, before.closingTriggerStart);
+    report.workflows.faqMeasurement = 'Opening FAQ answers refreshes the measured closing-section trigger.';
     await page.evaluate(() => window.__radianceDev.unmount());
     const unmounted = await page.evaluate(() => window.__radianceDev.stats());
     assert.equal(unmounted.triggers, 0); assert.equal(unmounted.lenisTickers, 0); assert.equal(unmounted.lenisActive, false);
@@ -64,7 +68,8 @@ try {
       }
       for (const [label, filename] of [['The sunshine','detail.webp'], ['The ritual','ritual.webp'], ['The signature','packaging.webp']]) {
         await page.getByRole('tab', { name: new RegExp(label) }).click();
-        assert((await page.locator('#rd-detail-panel img').getAttribute('src')).endsWith(filename)); await page.locator('#rd-detail-panel img').evaluate(image => image.decode());
+        await page.waitForFunction(filename => document.querySelector('#rd-detail-panel .rd-detail-image')?.getAttribute('src')?.endsWith(filename), filename);
+        await page.locator('#rd-detail-panel .rd-detail-image').evaluate(image => image.decode());
       }
       await page.getByRole('tab', { name: /The signature/ }).press('ArrowRight'); assert.equal(await page.getByRole('tab', { name: /The sunshine/ }).getAttribute('aria-selected'), 'true');
       await page.getByRole('tab', { name: /The sunshine/ }).press('End'); assert.equal(await page.getByRole('tab', { name: /The ritual/ }).getAttribute('aria-selected'), 'true');
@@ -94,7 +99,7 @@ try {
     await failed.route('**/assets/product/detail.webp', route => route.fulfill({ status: 404, body: '' }));
     await failed.goto(base, { waitUntil: 'networkidle' }); await ready(failed);
     await failed.getByRole('tab', { name: /The sunshine/ }).click(); await failed.getByRole('status').filter({ hasText: 'This detail could not be loaded.' }).waitFor();
-    await failed.getByRole('tab', { name: /The signature/ }).click(); await failed.locator('#rd-detail-panel img').evaluate(image => image.decode()); assert.equal(await failed.getByRole('status').count(), 0);
+    await failed.getByRole('tab', { name: /The signature/ }).click(); await failed.locator('#rd-detail-panel .rd-detail-image').waitFor(); await failed.locator('#rd-detail-panel .rd-detail-image').evaluate(image => image.decode()); assert.equal(await failed.getByRole('status').count(), 0);
     report.workflows.mediaFailure = 'Visible fallback and recovery by selecting another detail passed.'; await failed.close();
 
     const bundle = await browser.newPage({ viewport: { width: 390, height: 844 } }); await bundle.route('**/assets/radiance-*.js', route => route.abort());

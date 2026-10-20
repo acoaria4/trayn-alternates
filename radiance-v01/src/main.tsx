@@ -16,6 +16,6 @@ if (import.meta.env.DEV) {
   (window as unknown as { __radianceDev: object }).__radianceDev = {
     unmount: () => mounted.unmount(),
     remount: () => { mounted = createRoot(element); mounted.render(app); },
-    stats: () => ({ triggers: ScrollTrigger.getAll().length, lenisActive: document.documentElement.classList.contains('lenis'), lenisTickers: (gsap.ticker as unknown as { _listeners: Function[] })._listeners.filter(callback => callback.name === 'radianceTick').length }),
+    stats: () => ({ triggers: ScrollTrigger.getAll().length, closingTriggerStart: ScrollTrigger.getAll().find(trigger => trigger.trigger?.closest('.rd-closing'))?.start ?? null, lenisActive: document.documentElement.classList.contains('lenis'), lenisTickers: (gsap.ticker as unknown as { _listeners: Function[] })._listeners.filter(callback => callback.name === 'radianceTick').length }),
   };
 }
