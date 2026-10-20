@@ -1,0 +1,69 @@
+{
+  "product": "Radiance Cafe Latte",
+  "revision": "0.1",
+  "date": "2026-10-20",
+  "status": "Development proposal; unvalidated formulas and unconfirmed cost estimates",
+  "currency": "INR",
+  "servingGrams": 34,
+  "tinNetGrams": 510,
+  "tinFillOverageGrams": 2,
+  "saleableTinsPerRoute": 1000,
+  "proteinTargetGrams": 20,
+  "calculatedMainProteinGrams": 20.4,
+  "sweetenerActiveFraction": 0.10,
+  "fibreFractionAssumption": 0.90,
+  "fatPowderFatFractionAssumption": 0.70,
+  "ingredients": {
+    "mpc": { "name": "Instant beverage MPC80", "proteinFraction": 0.80, "rates": [1050, 1050, 1500], "basis": "Unconfirmed supplier listing S1; all scenarios require a suitable grade and current COA" },
+    "pea": { "name": "Pea protein isolate 80", "proteinFraction": 0.80, "rates": [480, 480, 800], "basis": "Advertised rate S2; higher sensory grade allowance in high scenario" },
+    "rice": { "name": "Rice protein 80", "proteinFraction": 0.80, "rates": [420, 420, 700], "basis": "Advertised rate S2; higher sensory grade allowance in high scenario" },
+    "yeast": { "name": "Purified food-grade yeast protein 80", "proteinFraction": 0.80, "rates": [899, 899, 1600], "basis": "Conditional price scenario using unidentified AngeoPro grade S3; not a quote for S80-A or a selected beverage grade" },
+    "fibre": { "name": "Resistant dextrin powder", "proteinFraction": 0, "rates": [500, 650, 1000], "basis": "Planning allowance; S6 lists 85 percent fibre at 610/kg, not the proposed 90 percent grade" },
+    "fat": { "name": "High oleic sunflower oil powder 70, dairy-free carrier", "proteinFraction": 0, "rates": [800, 1200, 1800], "basis": "Planning allowance; technical grade examples S5, no Indian delivered quote" },
+    "coffee": { "name": "Unsweetened soluble decaffeinated coffee", "proteinFraction": 0, "rates": [2500, 4000, 6000], "basis": "Planning allowance; soluble decaf candidate S7, no confirmed quote" },
+    "flavour": { "name": "Water-dispersible Cafe Latte flavour and masking compound", "proteinFraction": 0, "rates": [3500, 5000, 8000], "basis": "Planning allowance for a supplier compound including carriers; vegan grade required for R3/R4" },
+    "lecithin": { "name": "Dispersible powdered sunflower lecithin", "proteinFraction": 0, "rates": [1000, 1500, 2200], "basis": "Planning allowance, grade quote required" },
+    "sweetener": { "name": "Standardised 10 percent sucralose preblend", "proteinFraction": 0, "rates": [1000, 1500, 2500], "basis": "Planning allowance for prepared preblend, not neat sucralose; category permission pending" },
+    "salt": { "name": "Fine food-grade salt", "proteinFraction": 0, "rates": [30, 40, 60], "basis": "Planning allowance" }
+  },
+  "prototypes": [
+    { "id": "R1", "name": "MPC dairy", "grams": { "mpc": 25.5, "fibre": 3.5, "fat": 3, "coffee": 1, "flavour": 0.65, "lecithin": 0.2, "sweetener": 0.12, "salt": 0.03 } },
+    { "id": "R2", "name": "MPC and pea 70 to 30", "grams": { "mpc": 17.85, "pea": 7.65, "fibre": 3.35, "fat": 3, "coffee": 1, "flavour": 0.8, "lecithin": 0.2, "sweetener": 0.12, "salt": 0.03 } },
+    { "id": "R3", "name": "Pea and rice 70 to 30", "grams": { "pea": 17.85, "rice": 7.65, "fibre": 3.15, "fat": 3, "coffee": 1, "flavour": 1, "lecithin": 0.2, "sweetener": 0.12, "salt": 0.03 } },
+    { "id": "R4", "name": "Pea and yeast 70 to 30", "conditionalYeastPrice": true, "grams": { "pea": 17.85, "yeast": 7.65, "fibre": 3.15, "fat": 3, "coffee": 1, "flavour": 1, "lecithin": 0.2, "sweetener": 0.12, "salt": 0.03 } }
+  ],
+  "packaging": [
+    { "name": "Decorative tin and champagne-gold lid", "rates": [75, 110, 170] },
+    { "name": "Resealable moisture and oxygen barrier inner pouch", "rates": [7, 10, 15] },
+    { "name": "Food-contact scoop", "rates": [3, 5, 7] },
+    { "name": "Textured ivory printed wrap with premium gold detail", "rates": [8, 15, 25] },
+    { "name": "Tamper evidence", "rates": [1, 2, 3] },
+    { "name": "Protective retail carton", "rates": [5, 8, 12] },
+    { "name": "Master shipper and divider allocation", "rates": [3, 5, 8] }
+  ],
+  "scenarios": [
+    { "name": "Low planning case", "ingredientLoss": 0.01, "packagingRejectFraction": 0.02, "conversionPerKg": 100, "routineQaPerBatch": 30000, "inboundStoragePerServing": 1, "contingencyFraction": 0.03 },
+    { "name": "Base planning case", "ingredientLoss": 0.02, "packagingRejectFraction": 0.03, "conversionPerKg": 150, "routineQaPerBatch": 45000, "inboundStoragePerServing": 1.5, "contingencyFraction": 0.05 },
+    { "name": "High planning case", "ingredientLoss": 0.04, "packagingRejectFraction": 0.05, "conversionPerKg": 240, "routineQaPerBatch": 75000, "inboundStoragePerServing": 2.5, "contingencyFraction": 0.08 }
+  ],
+  "oneOff": {
+    "packagingSetupPerSelectedSku": 45000,
+    "sharedDevelopmentProgramme": 300000,
+    "basis": "Planning allowances only; clinical efficacy studies, novel ingredient approvals and specialist process development excluded"
+  },
+  "sources": {
+    "S1": "https://www.tradeindia.com/products/80-milk-protein-concentrate-powder-6648239.html",
+    "S2": "https://www.farmoganic.co.in/proteins-amp-sports-nutrition.html",
+    "S3": "https://easybuyingredients.com/product/angeopro-yeast-protein-angel-yeast/",
+    "S4": "https://en.angelyeast.com/news/yeast-protein/angel-yeast-at-vitafoods-europe-2026.html",
+    "S5": "https://www.abiteccorp.com/en/product-repository/nutri-sperse-powders/",
+    "S6": "https://www.rajvigroup.net/nutraceuticals-ingredients.html",
+    "S7": "https://mediocon.com/decaffeinated-soluble-coffee-powder-manufacturer-supplier-in-india-mediocon-inc",
+    "S8": "https://www.pracitincan.in/round-tin-box.html",
+    "S9": "https://cdr.wisc.edu/dairy-ingredients-faqs",
+    "S10": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7466195/",
+    "S11": "https://www.fssai.gov.in/food-law/regulations",
+    "S12": "https://fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_14_12_2022.pdf",
+    "S13": "https://diabetesjournals.org/care/article/49/Supplement_1/S246/163914/11-Chronic-Kidney-Disease-and-Risk-Management%20/"
+  }
+}
