@@ -1,0 +1,45 @@
+{
+  "product": "Radiance",
+  "conceptSlot": 2,
+  "selectedPackaging": "docs/alternative-02/packaging/radiance-v02/01-morning-gold-cafe-latte.png",
+  "generatedWith": "Built-in image_gen",
+  "assets": [
+    {
+      "id": "hero",
+      "transparent": false,
+      "prompt": "Use case: product-mockup. Create one exceptional horizontal 16:10 commercial product photograph for a premium feel-good daily nutrition website. The supplied selected Radiance Cafe Latte tin is the EXACT PRODUCT IDENTITY REFERENCE. Preserve its ivory cylindrical tin, brushed champagne-gold lid, precise TRAYN logo, custom flowing dark-brown Radiance lettering with sweeping capital R, DAILY PROTEIN, embossed gold sunburst, Cafe Latte flavor, 500 g, Contains Milk and delicate engraved coffee cup artwork. Do not invent packaging, claims, different logos or change the label. This is disclosed generated concept photography for a product in development. One complete tin stands in the RIGHT third of a pale limestone breakfast counter, its entire lid and base inside frame, with a small cream ceramic cafe latte cup and saucer just in front and to its left, a little oatmeal linen. Warm morning sunlight from a tall window, delicate organic shadows, airy creamy backdrop, golden bounce light, no saturated yellow cast. The LEFT 52% of the image is clean softly illuminated warm ivory wall and counter with quiet shadows and generous blank room for website heading overlay, absolutely no typography outside the tin. Compose product as a cherished everyday pantry object, believable texture and refined lighting. Camera farther back than reference so tin is about 65% of frame height. Premium lifestyle editorial photography, full resolution sharp product, beautiful delicate depth of field. No people, no added foods, no scenes printed on package, no collage, no badges."
+    },
+    {
+      "id": "ritual",
+      "transparent": false,
+      "prompt": "Use case: photorealistic-natural. Create one beautiful horizontal 3:2 editorial still life for a luxurious warm daily nutrition website. The supplied selected Radiance Cafe Latte tin is the EXACT PRODUCT IDENTITY REFERENCE. Preserve its ivory cylindrical tin, brushed champagne-gold lid, precise TRAYN logo, custom flowing dark-brown Radiance lettering with sweeping capital R, DAILY PROTEIN, embossed gold sunburst, Cafe Latte flavor, 500 g, Contains Milk and delicate engraved coffee cup artwork. Do not invent packaging, claims, different logos or change the label. This is disclosed generated concept photography for a product in development. A close cozy breakfast-table composition with a cream ceramic latte cup and saucer dominant in the lower-left foreground; natural latte foam leaf art, a warm linen napkin, a small closed cream-covered book with NO readable title, dappled morning sun, and the exact selected Radiance tin in the midground right slightly softly focused but recognizable. Set beside an airy window onto a sunlit garden. Espresso, ivory, pale honey, champagne and a trace of green outside. Warm real life and soft sunlight, intimate and welcoming, exquisitely composed with no clutter. No people or hands, no floating copy, no health symbols, no changed package. Photograph a quiet pleasurable morning ritual with subtle authentic texture. No heavily orange filter."
+    },
+    {
+      "id": "detail",
+      "transparent": false,
+      "prompt": "Use case: product-mockup. The supplied selected Radiance Cafe Latte tin is the EXACT PRODUCT IDENTITY REFERENCE. Preserve its ivory cylindrical tin, brushed champagne-gold lid, precise TRAYN logo, custom flowing dark-brown Radiance lettering with sweeping capital R, DAILY PROTEIN, embossed gold sunburst, Cafe Latte flavor, 500 g, Contains Milk and delicate engraved coffee cup artwork. Do not invent packaging, claims, different logos or change the label. This is disclosed generated concept photography for a product in development. Create a portrait 4:5 artistic macro photograph of the SAME tin's physical lower-front label: its embossed gold sun disc and fine rays, a glimpse of the sweeping Radiance lettering above, part of the engraved Cafe Latte cup illustration and subtle coffee botanical border below. Frame tight enough to see real ivory paper texture and delicate gold foil relief, at a shallow three-quarter angle, grazing soft morning light reveals embossing. Luxurious, quiet, warm and highly tactile. The label curves gently around the canister, no new artwork, no new claims, no extra words or logos. Deep coffee-brown, luminous ivory and restrained champagne foil. Realistic detailed photography. This is a close-up, not a redesigned package."
+    },
+    {
+      "id": "radiance-wordmark",
+      "transparent": true,
+      "prompt": "Use case: background-extraction / identity-preserve. Extract and faithfully reproduce ONLY the single custom script product wordmark \"Radiance\" from the supplied packaging image as a clean high-resolution isolated raster brand asset. Preserve the exact lettering silhouette: capital R with long sweeping lower flourish, flowing connected italic lowercase adi ance, dark espresso-brown solid ink. Spelling exactly Radiance. Keep all curves, letter weight, flourish and proportions from the reference. Output wide horizontal wordmark on a FULLY TRANSPARENT background, no paper, no tin, no lighting, no texture, no other text, no TRAYN logo, no DAILY PROTEIN, no gradients, no shadows, no sun. Clean opaque brown lettering with anti-aliased edges and a modest transparent margin, web-ready. Do not replace with generic typed text."
+    }
+  ],
+  "date": "2026-10-20",
+  "design": {
+    "thesis": "A sunlit daily ritual; warmth and craftsmanship without invented product claims.",
+    "type": "Self-hosted licensed Cormorant Garamond and Manrope",
+    "palette": "Warm ivory, espresso, champagne and pale honey",
+    "sequence": [
+      "Sunlit hero",
+      "The idea",
+      "The morning ritual",
+      "Interactive packaging details",
+      "Development FAQs",
+      "Closing"
+    ],
+    "motion": "GSAP + ScrollTrigger; Lenis only on fine-pointer desktop; native scroll on touch and under reduced motion",
+    "threeJs": "Not used; photography provides the material depth.",
+    "signature": "Keyboard-accessible detail tabs with whole tin, embossed label and morning ritual."
+  }
+}

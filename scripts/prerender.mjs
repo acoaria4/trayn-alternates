@@ -1,5 +1,5 @@
 import { readFile, writeFile, readdir } from 'node:fs/promises';
-import { renderPicker, renderNurture } from '../.prerender/entry-server.js';
+import { renderPicker, renderNurture, renderRadiance } from '../.prerender/entry-server.js';
 
 const assets = await readdir(new URL('../dist/assets/', import.meta.url));
 const escape = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;');
@@ -13,6 +13,7 @@ if (process.env.PUBLIC_SITE_URL) {
 for (const page of [
   { file: 'index.html', route: '', render: renderPicker, prefix: './', image: 'nurture-v01/assets/social/social-preview.jpg', fonts: ['manrope-latin-400-normal', 'manrope-latin-500-normal', 'cormorant-garamond-latin-400-normal'] },
   { file: 'nurture-v01/index.html', route: 'nurture-v01/', render: renderNurture, prefix: '../', image: 'assets/social/social-preview.jpg', fonts: ['cormorant-garamond-latin-400-normal', 'cormorant-garamond-latin-400-italic', 'manrope-latin-400-normal'] },
+  { file: 'radiance-v01/index.html', route: 'radiance-v01/', render: renderRadiance, prefix: '../', image: 'assets/social/social-preview.jpg', fonts: ['cormorant-garamond-latin-400-normal', 'cormorant-garamond-latin-400-italic', 'manrope-latin-400-normal'] },
 ]) {
   const file = new URL(`../dist/${page.file}`, import.meta.url);
   let html = await readFile(file, 'utf8');
@@ -27,4 +28,4 @@ for (const page of [
   }
   await writeFile(file, html.replace('<!--app-html-->', page.render()));
 }
-console.log('Prerendered the concept picker and Nurture v01.');
+console.log('Prerendered the concept picker, Nurture v01 and Radiance v01.');

@@ -10,5 +10,5 @@
     "skipLibCheck": true,
     "types": ["vite/client"]
   },
-  "include": ["src", "nurture-v01/src"]
+  "include": ["src", "nurture-v01/src", "radiance-v01/src"]
 }

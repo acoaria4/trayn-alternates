@@ -1,0 +1,98 @@
+{
+  "source": "docs/radiance/assets/",
+  "imagery": "Generated concepts; packaging and formulation unapproved.",
+  "files": [
+    {
+      "path": "product/detail.webp",
+      "bytes": 175066,
+      "sha256": "df8192e61111f3a2d27647d41581131961ef640126990a867d70359c1db1706e",
+      "width": 1000,
+      "height": 1250
+    },
+    {
+      "path": "product/hero-1000.webp",
+      "bytes": 58392,
+      "sha256": "79e99de814aca937f29e92cc7c9a10ff2e6779c14b8c7e9dba2c2f382577145b",
+      "width": 1000,
+      "height": 625
+    },
+    {
+      "path": "product/hero.webp",
+      "bytes": 120750,
+      "sha256": "94a29c6ceb3faabd84d5ba9664dffd73b61cb46aa569c162a46d7910fdf9495e",
+      "width": 1800,
+      "height": 1126
+    },
+    {
+      "path": "product/packaging-600.webp",
+      "bytes": 58294,
+      "sha256": "d6e1f69e635ad44d29c9d7973d89446fcac2b463d5721e6df74bdf75efffb582",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "path": "product/packaging.webp",
+      "bytes": 129948,
+      "sha256": "c5a2762cbe03974a99251c543f0dd6d36d6eb8be5f9d5c664234679812563d29",
+      "width": 1000,
+      "height": 1500
+    },
+    {
+      "path": "product/ritual-700.webp",
+      "bytes": 60566,
+      "sha256": "ab9b568e7ded9655880fd0c91d9ceb909cc7f0b25afb627bd3c631333034ae0c",
+      "width": 700,
+      "height": 467
+    },
+    {
+      "path": "product/ritual.webp",
+      "bytes": 158806,
+      "sha256": "c758ce272339145854529c3a294c55d04a1c81f65b4b73e6324c3ccc22d20c27",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "path": "brand/radiance-wordmark.webp",
+      "bytes": 67660,
+      "sha256": "a5be8a2a6ef5cf1e4947f4df95aa9b15e2fd6d9655d36e1f88b3459e06f7024b",
+      "width": 1000,
+      "height": 333
+    },
+    {
+      "path": "brand/trayn-symbol.webp",
+      "bytes": 6080,
+      "sha256": "2446e66155deaf45e581e5de65e5fb9b3ed62096d732327fb56f2c88bf6a7186",
+      "width": 192,
+      "height": 146
+    },
+    {
+      "path": "brand/trayn-wordmark.webp",
+      "bytes": 19982,
+      "sha256": "248f8f9814f53e95525d0ba267f0aa5a814802bb668e381ac4382f1b4ce73e43",
+      "width": 512,
+      "height": 107
+    },
+    {
+      "path": "icons/arrow-right.svg",
+      "bytes": 363,
+      "sha256": "14f696a58481c9beda41e80072caf23018a3942001235d67dc28e0d06a5e0122"
+    },
+    {
+      "path": "icons/arrow-up-right.svg",
+      "bytes": 358,
+      "sha256": "76a4f7f6858770c40934161a8e415874e8cc11d4da62719fb9f2df0e14c58bfa"
+    },
+    {
+      "path": "icons/ATTRIBUTION.txt",
+      "bytes": 439,
+      "sha256": "b4881e6a063935a59b655c09b87ddf04a2f57568505b4b90cf3a3aaff58817a6"
+    },
+    {
+      "path": "social/social-preview.jpg",
+      "bytes": 86761,
+      "sha256": "069fa3b83c87a871114c3eccaae422eeca31b09f0cb27b7501ec3ba699b51bcf",
+      "width": 1200,
+      "height": 630
+    }
+  ]
+}

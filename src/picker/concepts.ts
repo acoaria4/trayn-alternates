@@ -1,5 +1,11 @@
 // Add a concept here after its page and assets exist. Paths are relative to the picker.
-export const concepts = [
+type ProductConcept = {
+  id: string; title: string; href: string; image: string; imageLarge: string;
+  imageAlt: string; audience: string; description: string; protein: string;
+  base: string; occasion: string; status: string; action: string;
+};
+
+export const concepts: readonly ProductConcept[] = [
   {
     id: 'nurture-v01',
     title: 'Nurture v01',
@@ -15,4 +21,19 @@ export const concepts = [
     status: 'In development',
     action: 'Explore Nurture',
   },
-] as const;
+  {
+    id: 'radiance-v01',
+    title: 'Radiance v01',
+    href: './radiance-v01/',
+    image: './radiance-v01/assets/product/packaging-600.webp',
+    imageLarge: './radiance-v01/assets/product/packaging.webp',
+    imageAlt: 'Generated ivory-and-gold Radiance Cafe Latte concept tin',
+    audience: 'For middle-aged and older men & women living with diabetes',
+    description: 'A little sunshine. Every day. A Cafe Latte protein concept, imagined for a comforting everyday ritual.',
+    protein: 'Formulation in development',
+    base: 'Cafe Latte protein concept',
+    occasion: 'An everyday coffee moment',
+    status: 'In development',
+    action: 'Discover Radiance',
+  },
+];
