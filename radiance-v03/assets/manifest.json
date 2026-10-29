@@ -1,0 +1,112 @@
+{
+  "source": "docs/radiance/assets/v03/world/",
+  "imagery": "Generated packaging concept, not final artwork.",
+  "files": [
+    {
+      "path": "brand/radiance-small.webp",
+      "bytes": 13360,
+      "width": 384,
+      "height": 128,
+      "sha256": "608349db295ab12689041b506b2a62b86b30cca4d192038313940866d581a46e"
+    },
+    {
+      "path": "brand/trayn-small.webp",
+      "bytes": 7674,
+      "width": 280,
+      "height": 59,
+      "sha256": "bd5e5635b946e6586a26c7a56bdedc8034bb5b3a4802388a718b47a5a893a200"
+    },
+    {
+      "path": "world/sun-world-800.webp",
+      "bytes": 39408,
+      "width": 800,
+      "height": 533,
+      "sha256": "a10d003c6c778c8cf647103e6e269096155b7be4954ece70700b07d58531a323"
+    },
+    {
+      "path": "world/sun-world-800.avif",
+      "bytes": 20873,
+      "width": 800,
+      "height": 533,
+      "sha256": "9d8126e87419c0b68c30c6aaf4464b1c7506c7d719b01e2bdada0a54739da1f1"
+    },
+    {
+      "path": "world/sun-world.webp",
+      "bytes": 129400,
+      "width": 1800,
+      "height": 1200,
+      "sha256": "4a72dddf2cc418af4ee4683024443865dfee0bc3d6dd318c5360e5d04ad77a91"
+    },
+    {
+      "path": "world/sun-world.avif",
+      "bytes": 73558,
+      "width": 1800,
+      "height": 1200,
+      "sha256": "44ece5220fbfdaf56b424ac2722e25389dc42f6b54703786a9b6711a179b80d1"
+    },
+    {
+      "path": "world/latte-world-800.webp",
+      "bytes": 43620,
+      "width": 800,
+      "height": 533,
+      "sha256": "824880e6614fa203b0c4b499697753662be3d14a77ffd6c3d66feab91975119c"
+    },
+    {
+      "path": "world/latte-world-800.avif",
+      "bytes": 25078,
+      "width": 800,
+      "height": 533,
+      "sha256": "4fd6c632ff3d58ec7fe68335575c46a985f9d145e5bfb2f6587df9cedb991cfd"
+    },
+    {
+      "path": "world/latte-world.webp",
+      "bytes": 131708,
+      "width": 1800,
+      "height": 1200,
+      "sha256": "2f768c8c65cf6ab24e76987baa177d42604f74b7332c2fb4aeabca064e96e1a1"
+    },
+    {
+      "path": "world/latte-world.avif",
+      "bytes": 73509,
+      "width": 1800,
+      "height": 1200,
+      "sha256": "d4237e2305fbf4cbb694f346864138da240dfcbb4ccfc7d97e86b55bee5d3243"
+    },
+    {
+      "path": "world/floating-tin-540.webp",
+      "bytes": 68390,
+      "width": 540,
+      "height": 810,
+      "sha256": "ceb35fcb661e4db74e79aa769402c3b1cfcb8e2449699dbe83b8cf2ffce0b58d"
+    },
+    {
+      "path": "world/floating-tin-540.avif",
+      "bytes": 37930,
+      "width": 540,
+      "height": 810,
+      "sha256": "7df5ac3dd29ed50a4783760c7c97b7ae5a9e2eb82fe028c23371bf089f236c3a"
+    },
+    {
+      "path": "world/floating-tin.webp",
+      "bytes": 151322,
+      "width": 900,
+      "height": 1350,
+      "sha256": "a5f893a87c47392b4aee9473674ba55a30171b56aa52b6ce6eeae4db641d0e45"
+    },
+    {
+      "path": "world/floating-tin.avif",
+      "bytes": 79677,
+      "width": 900,
+      "height": 1350,
+      "sha256": "fd17d36b4ee43ff8dcb34b43e17cf423613fefcdde5daebc242576947141e478"
+    },
+    {
+      "path": "social/social-preview.jpg",
+      "bytes": 108230,
+      "width": 1200,
+      "height": 630,
+      "sha256": "284b5b3dc53b29ade60bc6ea338c4bd612dcfb4c05827e08a5efec60b9ab594c"
+    }
+  ],
+  "worldSource": "docs/radiance/assets/v03/world/"
+}

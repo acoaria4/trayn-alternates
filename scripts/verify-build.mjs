@@ -5,7 +5,7 @@ const exists = name => stat(new URL(name, output)).then(() => true, () => false)
 for (const name of ['docs', 'outputs', 'output', 'tmp', 'nurture-v01/docs', 'nurture-v01/output', 'nurture-v01/outputs', 'nurture-v01/tmp', 'nurture-v01/assets/masters', 'nurture-v01/assets/reference', 'radiance-v01/docs', 'radiance-v01/assets/masters', 'radiance-v01/assets/reference']) {
   assert.equal(await exists(name), false, `Private/source material deployed: ${name}`);
 }
-for (const name of ['index.html', 'nurture-v01/index.html', 'radiance-v01/index.html']) {
+for (const name of ['index.html', 'nurture-v01/index.html', 'radiance-v01/index.html', 'radiance-v03/index.html']) {
   const html = await readFile(new URL(name, output), 'utf8');
   assert(html.includes('<main'), `Missing static content: ${name}`);
   assert(!html.includes('<!--app-html-->'), `Missing prerender: ${name}`);
@@ -16,4 +16,5 @@ for (const name of ['index.html', 'nurture-v01/index.html', 'radiance-v01/index.
 }
 assert.equal((await readdir(output)).includes('nurture-v01'), true);
 assert.equal((await readdir(output)).includes('radiance-v01'), true);
-console.log('All three static pages and linked assets exist; private documents and source masters are excluded.');
+assert.equal((await readdir(output)).includes('radiance-v03'), true);
+console.log('All four static pages and linked assets exist; private documents and source masters are excluded.');

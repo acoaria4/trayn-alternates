@@ -8,11 +8,11 @@
     "typecheck": "tsc --noEmit",
     "build": "vite build && vite build --ssr src/entry-server.tsx --outDir .prerender && node scripts/prerender.mjs",
     "preview": "vite preview --host 127.0.0.1 --port 4180",
-    "verify": "npm run verify:picker && npm run verify:nurture && npm run verify:radiance",
+    "verify": "npm run verify:picker && npm run verify:nurture && npm run verify:radiance && npm run verify:radiance-v3",
     "assets:prepare": "node scripts/run-nurture.mjs prepare-media.mjs",
     "assets:social": "node scripts/run-nurture.mjs social-preview.mjs",
-    "verify:assets": "node scripts/verify-build.mjs && node scripts/run-nurture.mjs verify-assets.mjs && node scripts/verify-radiance-assets.mjs",
-    "verify:pages": "node scripts/verify-picker.mjs --pages && node scripts/run-nurture.mjs verify-mobile-pages.mjs && node scripts/verify-radiance.mjs --pages",
+    "verify:assets": "node scripts/verify-build.mjs && node scripts/run-nurture.mjs verify-assets.mjs && node scripts/verify-radiance-assets.mjs && node scripts/verify-radiance-v3-assets.mjs",
+    "verify:pages": "node scripts/verify-picker.mjs --pages && node scripts/run-nurture.mjs verify-mobile-pages.mjs && node scripts/verify-radiance.mjs --pages && node scripts/verify-radiance-v3.mjs --pages",
     "preview:pages": "node scripts/serve-pages-preview.mjs",
     "verify:accessibility": "node scripts/run-nurture.mjs audit-accessibility.mjs",
     "verify:browsers": "node scripts/run-nurture.mjs cross-browser.mjs",
@@ -20,6 +20,7 @@
     "verify:nurture": "node scripts/run-nurture.mjs verify.mjs",
     "verify:picker": "node scripts/verify-picker.mjs",
     "verify:radiance": "node scripts/verify-radiance.mjs",
+    "verify:radiance-v3": "node scripts/verify-radiance-v3.mjs",
     "assets:radiance": "node scripts/prepare-radiance-assets.mjs"
   },
   "dependencies": {

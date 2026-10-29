@@ -32,6 +32,9 @@ export default defineConfig(({ isSsrBuild }) => ({
       for (const directory of ['product', 'brand', 'icons', 'social']) {
         await cp(path.join(radianceAssets, directory), path.join(output, 'radiance-v01', 'assets', directory), { recursive: true });
       }
+      for (const directory of ['social', 'brand', 'world']) {
+        await cp(path.join(root, 'radiance-v03', 'assets', directory), path.join(output, 'radiance-v03', 'assets', directory), { recursive: true });
+      }
       await mkdir(path.join(output, 'shared', 'fonts'), { recursive: true });
       for (const file of ['manrope-LICENSE.txt', 'cormorant-garamond-LICENSE.txt']) {
         await cp(path.join(root, 'shared', 'fonts', file), path.join(output, 'shared', 'fonts', file));
@@ -43,6 +46,6 @@ export default defineConfig(({ isSsrBuild }) => ({
   ssr: { noExternal: ['gsap', 'lenis'] },
   build: {
     target: 'es2022',
-    ...(isSsrBuild ? {} : { rollupOptions: { input: { picker: path.join(root, 'index.html'), nurture: path.join(root, 'nurture-v01', 'index.html'), radiance: path.join(root, 'radiance-v01', 'index.html') } } }),
+    ...(isSsrBuild ? {} : { rollupOptions: { input: { picker: path.join(root, 'index.html'), nurture: path.join(root, 'nurture-v01', 'index.html'), radiance: path.join(root, 'radiance-v01', 'index.html'), radianceV3: path.join(root, 'radiance-v03', 'index.html') } } }),
   },
 }));

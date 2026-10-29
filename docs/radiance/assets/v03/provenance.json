@@ -1,0 +1,26 @@
+{
+  "tool": "Built-in image_gen.imagegen",
+  "created": "2026-10-29",
+  "reference": "radiance-v01/assets/product/packaging.webp",
+  "master": "docs/radiance/assets/v03/morning.png",
+  "prompt": "Use case: product-mockup. Create an original premium editorial product photograph for the Radiance v3 website hero. Reference image is the exact existing Radiance tin: preserve its cylindrical proportions, ivory botanical paper, champagne gold lid, TRAYN logo, flowing Radiance lettering, sunburst and Cafe Latte artwork. Landscape 3:2 composition. One upright Radiance tin stands on a warm ivory limestone kitchen counter, tin positioned at 68% of image width and entirely visible including lid and base with comfortable margins. A small handmade cream ceramic latte cup and saucer low at the far right, folded ivory linen partly entering bottom right. Left 40% is calm pale cream wall and counter with plenty of negative space. Strong beautiful early morning sunlight from the upper right creates broad architectural window shadows and warm honey reflections, with extremely subtle out of focus olive foliage at upper right only. Refined contemporary still-life art direction, realistic materials, bright luminous restrained ivory palette, no people, no floating objects, no new slogans or overlaid typography, no border. Preserve the package identity faithfully, including packaging-concept wording. The tin is the clear focal point; no extra packs.",
+  "purpose": "Radiance v03 original hero photography; existing Radiance packaging identity preserved.",
+  "references": [
+    {
+      "url": "https://www.elevateonex.com/home",
+      "role": "Typography scale, large photography, editorial pacing; no source imagery or copy reused."
+    },
+    {
+      "url": "https://www.elevateonex.com/contact",
+      "role": "Animated living-scene inspiration; firefly drawing and loose flocking are original Canvas 2D code."
+    }
+  ],
+  "sharedAssets": "Radiance v01 packaging, ritual, brand marks, Solar arrow icons and shared licensed Manrope fonts.",
+  "motion": {
+    "designVariance": 6,
+    "motionIntensity": 5,
+    "visualDensity": 3,
+    "purpose": "Marketing delight in the firefly chapter; hierarchy in one-time entrances; feedback on controls.",
+    "fallback": "Static lights without JavaScript or with reduced motion; pause control; offscreen and document-hidden suspension."
+  }
+}

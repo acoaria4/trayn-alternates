@@ -19,7 +19,8 @@ try {
     await page.evaluate(() => document.fonts.ready);
     assert.equal(await page.getByRole('heading', { name: '1) Nurture v01', exact: true }).count(), 1);
     assert.equal(await page.getByRole('heading', { name: '2) Radiance v01', exact: true }).count(), 1);
-    assert.equal(await page.locator('.picker-option').count(), 2);
+    assert.equal(await page.getByRole('heading', { name: '3) Radiance v03', exact: true }).count(), 1);
+    assert.equal(await page.locator('.picker-option').count(), 3);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Overflow at ${width}`);
     assert.equal(await page.locator('img').evaluateAll(images => images.filter(image => !image.complete || !image.naturalWidth).length), 0);
     const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
@@ -39,7 +40,15 @@ try {
     assert(await page.getByRole('heading', { level: 1, name: 'A little sunshine. Every day.' }).isVisible());
     await page.locator('.rd-all').click();
     await page.waitForURL(base);
-    report.layouts.push({ width, navigation: 'picker → Nurture → picker → Radiance → picker', accessibilityViolations: 0 });
+    await page.getByRole('link', { name: '3) Radiance v03', exact: true }).click();
+    await page.waitForURL(new URL('radiance-v03/', base).href);
+    assert(await page.getByRole('heading', { level: 1, name: 'Everyday. Reimagined.' }).isVisible());
+    if (width < 768) {
+      await page.locator('.rv3-menu summary').click();
+      await page.getByRole('navigation', { name: 'Radiance navigation' }).getByRole('link', { name: 'All alternatives' }).click();
+    } else await page.locator('.rv3-all').click();
+    await page.waitForURL(base);
+    report.layouts.push({ width, navigation: 'picker → Nurture → picker → Radiance v01 → picker → Radiance v03 → picker', accessibilityViolations: 0 });
     await context.close();
   }
   const context = await browser.newContext({ javaScriptEnabled: false });
@@ -53,6 +62,10 @@ try {
   assert(await page.getByRole('heading', { level: 1, name: 'A little sunshine. Every day.' }).isVisible());
   await page.locator('.rd-all').click();
   assert(await page.getByRole('heading', { name: '2) Radiance v01', exact: true }).isVisible());
+  await page.getByRole('link', { name: '3) Radiance v03', exact: true }).click();
+  assert(await page.getByRole('heading', { level: 1, name: 'Everyday. Reimagined.' }).isVisible());
+  await page.locator('.rv3-all').click();
+  assert(await page.getByRole('heading', { name: '3) Radiance v03', exact: true }).isVisible());
   await context.close();
   assert.deepEqual(report.errors, []);
   report.noJavaScriptNavigation = 'passed';

@@ -23,7 +23,7 @@ export default function Picker() {
             <a className="picker-option-link" href={concept.href} aria-labelledby={`${concept.id}-title`}>
               <div className="picker-image-stage">
                 <img src={concept.image} srcSet={`${concept.image} 600w, ${concept.imageLarge} 1000w`} sizes="(max-width: 700px) 90vw, 40vw" width="1000" height="1500" alt={concept.imageAlt} fetchPriority={index === 0 ? 'high' : 'auto'} />
-                <span className="picker-image-note">Generated packaging concept</span>
+                <span className="picker-image-note">{concept.imageNote || 'Generated packaging concept'}</span>
               </div>
               <div className="picker-option-content">
                 <span className="picker-status"><span aria-hidden="true" />{concept.status}</span>
