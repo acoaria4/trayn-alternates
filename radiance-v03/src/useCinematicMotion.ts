@@ -29,7 +29,7 @@ export function useCinematicMotion(root: RefObject<HTMLDivElement | null>) {
       const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
       intro.from('.rv3-hero-line', { yPercent: 35, opacity: .65, duration: 1.2, stagger: .12 })
         .from('.rv3-floating-tin', { y: 70, rotate: -8, duration: 1.4 }, .1)
-        .from(['.rv3-hero-label','.rv3-orbit-link','.rv3-hero-description'], { opacity: .8, y: 18, stagger: .08, duration: .8 }, .35);
+        .from('.rv3-orbit-link', { opacity: .8, y: 18, duration: .8 }, .35);
       if (desktop) {
         gsap.timeline({ scrollTrigger: { trigger: '.rv3-hero', start: 'top top', end: 'bottom top', scrub: .9 } })
           .to('.rv3-hero-line-one', { xPercent: -16, yPercent: -12, ease: 'none' }, 0)
@@ -45,19 +45,21 @@ export function useCinematicMotion(root: RefObject<HTMLDivElement | null>) {
       const stage = element.querySelector<HTMLElement>('.rv3-chapter-stage')!;
       const track = element.querySelector<HTMLElement>('.rv3-chapter-track')!;
       const links = [...element.querySelectorAll<HTMLAnchorElement>('[data-chapter-link]')];
+      const lastChapter = links.length - 1;
+      const journeyDistance = () => stage.clientWidth * lastChapter * 1.1;
       let selected = -1;
       const setChapter = (index: number) => {
         if (index === selected) return;
         selected = index;
         links.forEach((link, i) => { if (i === index) link.setAttribute('aria-current', 'step'); else link.removeAttribute('aria-current'); });
         const counter = element.querySelector('.rv3-chapter-counter');
-        if (counter) counter.textContent = `0${index + 1} / 03`;
+        if (counter) counter.textContent = `0${index + 1} / 0${links.length}`;
       };
       let journeyTrigger: ScrollTrigger | undefined;
       if (desktop) {
-        const tween = gsap.to(track, { x: () => -(track.scrollWidth - stage.clientWidth), ease: 'none', scrollTrigger: { trigger: journey, start: 'top top', end: () => `+=${stage.clientWidth * 2.25}`, scrub: 1, pin: stage, anticipatePin: 1, invalidateOnRefresh: true, onUpdate: self => { setChapter(Math.min(2, Math.round(self.progress * 2))); } } });
+        const tween = gsap.to(track, { x: () => -(track.scrollWidth - stage.clientWidth), ease: 'none', scrollTrigger: { trigger: journey, start: 'top top', end: () => `+=${journeyDistance()}`, scrub: .65, pin: stage, anticipatePin: 1, invalidateOnRefresh: true, onUpdate: self => { setChapter(Math.min(lastChapter, Math.round(self.progress * lastChapter))); } } });
         journeyTrigger = tween.scrollTrigger;
-        gsap.fromTo('.rv3-journey-progress>span', { scaleX: 0 }, { scaleX: 1, ease: 'none', scrollTrigger: { trigger: journey, start: 'top top', end: () => `+=${stage.clientWidth * 2.25}`, scrub: true } });
+        gsap.fromTo('.rv3-journey-progress>span', { scaleX: 0 }, { scaleX: 1, ease: 'none', scrollTrigger: { trigger: journey, start: 'top top', end: () => `+=${journeyDistance()}`, scrub: true } });
         setChapter(0);
       } else {
         element.querySelectorAll<HTMLElement>('.rv3-chapter-panel').forEach((panel, index) => { ScrollTrigger.create({ trigger: panel, start: 'top 55%', end: 'bottom 55%', onEnter: () => setChapter(index), onEnterBack: () => setChapter(index) }); });
@@ -67,7 +69,7 @@ export function useCinematicMotion(root: RefObject<HTMLDivElement | null>) {
         if (!link || !journeyTrigger || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
         event.stopPropagation();
-        const index = Number(link.dataset.chapterLink), target = journeyTrigger.start + (journeyTrigger.end - journeyTrigger.start) * index / 2;
+        const index = Number(link.dataset.chapterLink), target = journeyTrigger.start + (journeyTrigger.end - journeyTrigger.start) * index / lastChapter;
         if (lenis) lenis.scrollTo(target, { duration: event.detail === 0 ? 0 : .9, immediate: event.detail === 0 });
         else window.scrollTo({ top: target, behavior: 'instant' });
         history.replaceState(null, '', link.hash);
