@@ -1,0 +1,54 @@
+{
+  "captures": [
+    {
+      "route": 1,
+      "cost": 40.69926020408163,
+      "protein": 14.999999999999996,
+      "saleableServings": 14050.179211469536
+    },
+    {
+      "route": 2,
+      "cost": 44.005382653061226,
+      "protein": 14.999999999999996,
+      "saleableServings": 14050.179211469536
+    },
+    {
+      "route": 3,
+      "cost": 39.92885204081633,
+      "protein": 15,
+      "saleableServings": 14050.179211469534
+    },
+    {
+      "route": 4,
+      "cost": "",
+      "protein": 15,
+      "saleableServings": 14050.179211469534
+    }
+  ],
+  "independent": 40.69926020408163,
+  "errorScan": {
+    "recordCount": 1,
+    "truncated": false,
+    "metadata": {
+      "revision": "hpcwv1",
+      "target": {
+        "id": "wb/7zkzin",
+        "beforeLines": 0,
+        "afterLines": 0
+      },
+      "kind": {
+        "requested": "match",
+        "tokens": [
+          "match"
+        ]
+      },
+      "include": {
+        "tokens": []
+      },
+      "exclude": {
+        "tokens": []
+      },
+      "notices": []
+    }
+  }
+}

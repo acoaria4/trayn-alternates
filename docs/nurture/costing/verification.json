@@ -1,0 +1,32 @@
+{
+  "inspect": {
+    "recordCount": 1,
+    "truncated": false,
+    "metadata": {
+      "revision": "1qqfkp",
+      "target": {
+        "id": "wb/ag811z",
+        "beforeLines": 0,
+        "afterLines": 0
+      },
+      "kind": {
+        "requested": "match",
+        "tokens": [
+          "match"
+        ]
+      },
+      "include": {
+        "tokens": []
+      },
+      "exclude": {
+        "tokens": []
+      },
+      "notices": []
+    }
+  },
+  "protein": 14.999999999999996,
+  "original": 156.05581827592692,
+  "changed": 160.97888434029736,
+  "noCredit": 86.21290178571428,
+  "independentPacked": 82.97272959183671
+}

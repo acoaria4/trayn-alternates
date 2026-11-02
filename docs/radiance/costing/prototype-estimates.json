@@ -1,0 +1,1259 @@
+{
+  "date": "2026-10-20",
+  "status": "Development proposal; unvalidated formulas and unconfirmed cost estimates",
+  "currency": "INR",
+  "servingGrams": 34,
+  "tinNetGrams": 510,
+  "servingsPerTin": 15,
+  "saleableTinsPerRoute": 1000,
+  "fillFactor": 1.003921568627451,
+  "exclusions": [
+    "recoverable GST",
+    "outbound fulfilment",
+    "selling fees and distributor margin",
+    "marketing",
+    "business overhead",
+    "clinical efficacy studies"
+  ],
+  "results": [
+    {
+      "id": "R1",
+      "name": "MPC dairy",
+      "conditionalYeastPrice": false,
+      "calculatedMainProteinGrams": 20.400000000000002,
+      "activeSucraloseMg": 12,
+      "fibreIngredientContributionGrams": 3.15,
+      "batchGrams": {
+        "mpc": 750,
+        "fibre": 102.94117647058823,
+        "fat": 88.23529411764706,
+        "coffee": 29.41176470588235,
+        "flavour": 19.117647058823533,
+        "lecithin": 5.88235294117647,
+        "sweetener": 3.5294117647058822,
+        "salt": 0.8823529411764706
+      },
+      "scenarios": [
+        {
+          "scenario": "Low planning case",
+          "ingredientLines": [
+            {
+              "id": "mpc",
+              "grams": 25.5,
+              "ratePerKg": 1050,
+              "cost": 26.775
+            },
+            {
+              "id": "fibre",
+              "grams": 3.5,
+              "ratePerKg": 500,
+              "cost": 1.75
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 800,
+              "cost": 2.4
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 2500,
+              "cost": 2.5
+            },
+            {
+              "id": "flavour",
+              "grams": 0.65,
+              "ratePerKg": 3500,
+              "cost": 2.275
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 1000,
+              "cost": 0.2
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 1000,
+              "cost": 0.12
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 30,
+              "cost": 0.0008999999999999999
+            }
+          ],
+          "nominalIngredients": 36.0209,
+          "fillOverage": 0.1412584313725485,
+          "processLoss": 0.3652743275896217,
+          "packagingSetCost": 102,
+          "packagingSets": 1021,
+          "packaging": 6.9428,
+          "conversion": 3.4133333333333336,
+          "routineQa": 2,
+          "inboundStorage": 1,
+          "contingency": 1.496506982768865,
+          "recurringPerServing": 51.38007307506437,
+          "recurringPerTin": 770.7010961259655,
+          "recurringBatch": 770701.0961259655,
+          "grossIngredientBatchKg": 517.1717171717172
+        },
+        {
+          "scenario": "Base planning case",
+          "ingredientLines": [
+            {
+              "id": "mpc",
+              "grams": 25.5,
+              "ratePerKg": 1050,
+              "cost": 26.775
+            },
+            {
+              "id": "fibre",
+              "grams": 3.5,
+              "ratePerKg": 650,
+              "cost": 2.275
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 1200,
+              "cost": 3.6
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 4000,
+              "cost": 4
+            },
+            {
+              "id": "flavour",
+              "grams": 0.65,
+              "ratePerKg": 5000,
+              "cost": 3.25
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 1500,
+              "cost": 0.3
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 1500,
+              "cost": 0.18
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 40,
+              "cost": 0.0012
+            }
+          ],
+          "nominalIngredients": 40.38119999999999,
+          "fillOverage": 0.15835764705882294,
+          "processLoss": 0.8273379111644656,
+          "packagingSetCost": 155,
+          "packagingSets": 1031,
+          "packaging": 10.653666666666668,
+          "conversion": 5.12,
+          "routineQa": 3,
+          "inboundStorage": 1.5,
+          "contingency": 3.0820281112444974,
+          "recurringPerServing": 64.72259033613443,
+          "recurringPerTin": 970.8388550420165,
+          "recurringBatch": 970838.8550420165,
+          "grossIngredientBatchKg": 522.4489795918367
+        },
+        {
+          "scenario": "High planning case",
+          "ingredientLines": [
+            {
+              "id": "mpc",
+              "grams": 25.5,
+              "ratePerKg": 1500,
+              "cost": 38.25
+            },
+            {
+              "id": "fibre",
+              "grams": 3.5,
+              "ratePerKg": 1000,
+              "cost": 3.5
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 1800,
+              "cost": 5.4
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 6000,
+              "cost": 6
+            },
+            {
+              "id": "flavour",
+              "grams": 0.65,
+              "ratePerKg": 8000,
+              "cost": 5.2
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 2200,
+              "cost": 0.44
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 2500,
+              "cost": 0.3
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 60,
+              "cost": 0.0017999999999999997
+            }
+          ],
+          "nominalIngredients": 59.0918,
+          "fillOverage": 0.23173254901960702,
+          "processLoss": 2.4718138562091503,
+          "packagingSetCost": 240,
+          "packagingSets": 1053,
+          "packaging": 16.848,
+          "conversion": 8.192,
+          "routineQa": 5,
+          "inboundStorage": 2.5,
+          "contingency": 7.546827712418301,
+          "recurringPerServing": 101.88217411764707,
+          "recurringPerTin": 1528.232611764706,
+          "recurringBatch": 1528232.611764706,
+          "grossIngredientBatchKg": 533.3333333333334
+        }
+      ],
+      "firstLaunchPerServing": 87.72259033613443,
+      "packagingSetupPerServing": 3,
+      "developmentPerServing": 20,
+      "fiveHundredGramTin": {
+        "scenario": "Base planning case",
+        "ingredientLines": [
+          {
+            "id": "mpc",
+            "grams": 25.5,
+            "ratePerKg": 1050,
+            "cost": 26.775
+          },
+          {
+            "id": "fibre",
+            "grams": 3.5,
+            "ratePerKg": 650,
+            "cost": 2.275
+          },
+          {
+            "id": "fat",
+            "grams": 3,
+            "ratePerKg": 1200,
+            "cost": 3.6
+          },
+          {
+            "id": "coffee",
+            "grams": 1,
+            "ratePerKg": 4000,
+            "cost": 4
+          },
+          {
+            "id": "flavour",
+            "grams": 0.65,
+            "ratePerKg": 5000,
+            "cost": 3.25
+          },
+          {
+            "id": "lecithin",
+            "grams": 0.2,
+            "ratePerKg": 1500,
+            "cost": 0.3
+          },
+          {
+            "id": "sweetener",
+            "grams": 0.12,
+            "ratePerKg": 1500,
+            "cost": 0.18
+          },
+          {
+            "id": "salt",
+            "grams": 0.03,
+            "ratePerKg": 40,
+            "cost": 0.0012
+          }
+        ],
+        "nominalIngredients": 40.38119999999999,
+        "fillOverage": 0.1615248000000001,
+        "processLoss": 0.8274025469387755,
+        "packagingSetCost": 155,
+        "packagingSets": 1031,
+        "packaging": 10.866740000000002,
+        "conversion": 5.1204,
+        "routineQa": 3.06,
+        "inboundStorage": 1.5,
+        "contingency": 3.0958633673469387,
+        "recurringPerServing": 65.01313071428571,
+        "recurringPerTin": 956.0754516806721,
+        "recurringBatch": 956075.4516806721,
+        "grossIngredientBatchKg": 512.2448979591837
+      }
+    },
+    {
+      "id": "R2",
+      "name": "MPC and pea 70 to 30",
+      "conditionalYeastPrice": false,
+      "calculatedMainProteinGrams": 20.400000000000002,
+      "activeSucraloseMg": 12,
+      "fibreIngredientContributionGrams": 3.015,
+      "batchGrams": {
+        "mpc": 525,
+        "pea": 225,
+        "fibre": 98.52941176470588,
+        "fat": 88.23529411764706,
+        "coffee": 29.41176470588235,
+        "flavour": 23.52941176470588,
+        "lecithin": 5.88235294117647,
+        "sweetener": 3.5294117647058822,
+        "salt": 0.8823529411764706
+      },
+      "scenarios": [
+        {
+          "scenario": "Low planning case",
+          "ingredientLines": [
+            {
+              "id": "mpc",
+              "grams": 17.85,
+              "ratePerKg": 1050,
+              "cost": 18.7425
+            },
+            {
+              "id": "pea",
+              "grams": 7.65,
+              "ratePerKg": 480,
+              "cost": 3.672
+            },
+            {
+              "id": "fibre",
+              "grams": 3.35,
+              "ratePerKg": 500,
+              "cost": 1.675
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 800,
+              "cost": 2.4
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 2500,
+              "cost": 2.5
+            },
+            {
+              "id": "flavour",
+              "grams": 0.8,
+              "ratePerKg": 3500,
+              "cost": 2.8
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 1000,
+              "cost": 0.2
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 1000,
+              "cost": 0.12
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 30,
+              "cost": 0.0008999999999999999
+            }
+          ],
+          "nominalIngredients": 32.1104,
+          "fillOverage": 0.1259231372549015,
+          "processLoss": 0.3256194256288374,
+          "packagingSetCost": 102,
+          "packagingSets": 1021,
+          "packaging": 6.9428,
+          "conversion": 3.4133333333333336,
+          "routineQa": 2,
+          "inboundStorage": 1,
+          "contingency": 1.377542276886512,
+          "recurringPerServing": 47.29561817310358,
+          "recurringPerTin": 709.4342725965537,
+          "recurringBatch": 709434.2725965537,
+          "grossIngredientBatchKg": 517.1717171717172
+        },
+        {
+          "scenario": "Base planning case",
+          "ingredientLines": [
+            {
+              "id": "mpc",
+              "grams": 17.85,
+              "ratePerKg": 1050,
+              "cost": 18.7425
+            },
+            {
+              "id": "pea",
+              "grams": 7.65,
+              "ratePerKg": 480,
+              "cost": 3.672
+            },
+            {
+              "id": "fibre",
+              "grams": 3.35,
+              "ratePerKg": 650,
+              "cost": 2.1775
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 1200,
+              "cost": 3.6
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 4000,
+              "cost": 4
+            },
+            {
+              "id": "flavour",
+              "grams": 0.8,
+              "ratePerKg": 5000,
+              "cost": 4
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 1500,
+              "cost": 0.3
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 1500,
+              "cost": 0.18
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 40,
+              "cost": 0.0012
+            }
+          ],
+          "nominalIngredients": 36.673199999999994,
+          "fillOverage": 0.14381647058823477,
+          "processLoss": 0.7513676830732292,
+          "packagingSetCost": 155,
+          "packagingSets": 1031,
+          "packaging": 10.653666666666668,
+          "conversion": 5.12,
+          "routineQa": 3,
+          "inboundStorage": 1.5,
+          "contingency": 2.8921025410164063,
+          "recurringPerServing": 60.734153361344525,
+          "recurringPerTin": 911.0123004201679,
+          "recurringBatch": 911012.3004201679,
+          "grossIngredientBatchKg": 522.4489795918367
+        },
+        {
+          "scenario": "High planning case",
+          "ingredientLines": [
+            {
+              "id": "mpc",
+              "grams": 17.85,
+              "ratePerKg": 1500,
+              "cost": 26.775000000000002
+            },
+            {
+              "id": "pea",
+              "grams": 7.65,
+              "ratePerKg": 800,
+              "cost": 6.12
+            },
+            {
+              "id": "fibre",
+              "grams": 3.35,
+              "ratePerKg": 1000,
+              "cost": 3.35
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 1800,
+              "cost": 5.4
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 6000,
+              "cost": 6
+            },
+            {
+              "id": "flavour",
+              "grams": 0.8,
+              "ratePerKg": 8000,
+              "cost": 6.4
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 2200,
+              "cost": 0.44
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 2500,
+              "cost": 0.3
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 60,
+              "cost": 0.0017999999999999997
+            }
+          ],
+          "nominalIngredients": 54.7868,
+          "fillOverage": 0.21485019607843062,
+          "processLoss": 2.2917354248366015,
+          "packagingSetCost": 240,
+          "packagingSets": 1053,
+          "packaging": 16.848,
+          "conversion": 8.192,
+          "routineQa": 5,
+          "inboundStorage": 2.5,
+          "contingency": 7.186670849673203,
+          "recurringPerServing": 97.02005647058824,
+          "recurringPerTin": 1455.3008470588236,
+          "recurringBatch": 1455300.8470588236,
+          "grossIngredientBatchKg": 533.3333333333334
+        }
+      ],
+      "firstLaunchPerServing": 83.73415336134453,
+      "packagingSetupPerServing": 3,
+      "developmentPerServing": 20,
+      "fiveHundredGramTin": {
+        "scenario": "Base planning case",
+        "ingredientLines": [
+          {
+            "id": "mpc",
+            "grams": 17.85,
+            "ratePerKg": 1050,
+            "cost": 18.7425
+          },
+          {
+            "id": "pea",
+            "grams": 7.65,
+            "ratePerKg": 480,
+            "cost": 3.672
+          },
+          {
+            "id": "fibre",
+            "grams": 3.35,
+            "ratePerKg": 650,
+            "cost": 2.1775
+          },
+          {
+            "id": "fat",
+            "grams": 3,
+            "ratePerKg": 1200,
+            "cost": 3.6
+          },
+          {
+            "id": "coffee",
+            "grams": 1,
+            "ratePerKg": 4000,
+            "cost": 4
+          },
+          {
+            "id": "flavour",
+            "grams": 0.8,
+            "ratePerKg": 5000,
+            "cost": 4
+          },
+          {
+            "id": "lecithin",
+            "grams": 0.2,
+            "ratePerKg": 1500,
+            "cost": 0.3
+          },
+          {
+            "id": "sweetener",
+            "grams": 0.12,
+            "ratePerKg": 1500,
+            "cost": 0.18
+          },
+          {
+            "id": "salt",
+            "grams": 0.03,
+            "ratePerKg": 40,
+            "cost": 0.0012
+          }
+        ],
+        "nominalIngredients": 36.673199999999994,
+        "fillOverage": 0.1466928000000001,
+        "processLoss": 0.7514263836734693,
+        "packagingSetCost": 155,
+        "packagingSets": 1031,
+        "packaging": 10.866740000000002,
+        "conversion": 5.1204,
+        "routineQa": 3.06,
+        "inboundStorage": 1.5,
+        "contingency": 2.9059229591836733,
+        "recurringPerServing": 61.024382142857135,
+        "recurringPerTin": 897.4173844537813,
+        "recurringBatch": 897417.3844537813,
+        "grossIngredientBatchKg": 512.2448979591837
+      }
+    },
+    {
+      "id": "R3",
+      "name": "Pea and rice 70 to 30",
+      "conditionalYeastPrice": false,
+      "calculatedMainProteinGrams": 20.400000000000002,
+      "activeSucraloseMg": 12,
+      "fibreIngredientContributionGrams": 2.835,
+      "batchGrams": {
+        "pea": 525,
+        "rice": 225,
+        "fibre": 92.64705882352942,
+        "fat": 88.23529411764706,
+        "coffee": 29.41176470588235,
+        "flavour": 29.41176470588235,
+        "lecithin": 5.88235294117647,
+        "sweetener": 3.5294117647058822,
+        "salt": 0.8823529411764706
+      },
+      "scenarios": [
+        {
+          "scenario": "Low planning case",
+          "ingredientLines": [
+            {
+              "id": "pea",
+              "grams": 17.85,
+              "ratePerKg": 480,
+              "cost": 8.568
+            },
+            {
+              "id": "rice",
+              "grams": 7.65,
+              "ratePerKg": 420,
+              "cost": 3.213
+            },
+            {
+              "id": "fibre",
+              "grams": 3.15,
+              "ratePerKg": 500,
+              "cost": 1.575
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 800,
+              "cost": 2.4
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 2500,
+              "cost": 2.5
+            },
+            {
+              "id": "flavour",
+              "grams": 1,
+              "ratePerKg": 3500,
+              "cost": 3.5
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 1000,
+              "cost": 0.2
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 1000,
+              "cost": 0.12
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 30,
+              "cost": 0.0008999999999999999
+            }
+          ],
+          "nominalIngredients": 22.076900000000002,
+          "fillOverage": 0.08657607843137224,
+          "processLoss": 0.22387349574173104,
+          "packagingSetCost": 102,
+          "packagingSets": 1021,
+          "packaging": 6.9428,
+          "conversion": 3.4133333333333336,
+          "routineQa": 2,
+          "inboundStorage": 1,
+          "contingency": 1.0723044872251932,
+          "recurringPerServing": 36.815787394731636,
+          "recurringPerTin": 552.2368109209746,
+          "recurringBatch": 552236.8109209746,
+          "grossIngredientBatchKg": 517.1717171717172
+        },
+        {
+          "scenario": "Base planning case",
+          "ingredientLines": [
+            {
+              "id": "pea",
+              "grams": 17.85,
+              "ratePerKg": 480,
+              "cost": 8.568
+            },
+            {
+              "id": "rice",
+              "grams": 7.65,
+              "ratePerKg": 420,
+              "cost": 3.213
+            },
+            {
+              "id": "fibre",
+              "grams": 3.15,
+              "ratePerKg": 650,
+              "cost": 2.0475
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 1200,
+              "cost": 3.6
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 4000,
+              "cost": 4
+            },
+            {
+              "id": "flavour",
+              "grams": 1,
+              "ratePerKg": 5000,
+              "cost": 5
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 1500,
+              "cost": 0.3
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 1500,
+              "cost": 0.18
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 40,
+              "cost": 0.0012
+            }
+          ],
+          "nominalIngredients": 26.9097,
+          "fillOverage": 0.10552823529411727,
+          "processLoss": 0.5513311884753902,
+          "packagingSetCost": 155,
+          "packagingSets": 1031,
+          "packaging": 10.653666666666668,
+          "conversion": 5.12,
+          "routineQa": 3,
+          "inboundStorage": 1.5,
+          "contingency": 2.3920113045218088,
+          "recurringPerServing": 50.232237394957984,
+          "recurringPerTin": 753.4835609243697,
+          "recurringBatch": 753483.5609243697,
+          "grossIngredientBatchKg": 522.4489795918367
+        },
+        {
+          "scenario": "High planning case",
+          "ingredientLines": [
+            {
+              "id": "pea",
+              "grams": 17.85,
+              "ratePerKg": 800,
+              "cost": 14.280000000000001
+            },
+            {
+              "id": "rice",
+              "grams": 7.65,
+              "ratePerKg": 700,
+              "cost": 5.355
+            },
+            {
+              "id": "fibre",
+              "grams": 3.15,
+              "ratePerKg": 1000,
+              "cost": 3.15
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 1800,
+              "cost": 5.4
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 6000,
+              "cost": 6
+            },
+            {
+              "id": "flavour",
+              "grams": 1,
+              "ratePerKg": 8000,
+              "cost": 8
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 2200,
+              "cost": 0.44
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 2500,
+              "cost": 0.3
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 60,
+              "cost": 0.0017999999999999997
+            }
+          ],
+          "nominalIngredients": 42.9268,
+          "fillOverage": 0.16834039215686214,
+          "processLoss": 1.7956308496732027,
+          "packagingSetCost": 240,
+          "packagingSets": 1053,
+          "packaging": 16.848,
+          "conversion": 8.192,
+          "routineQa": 5,
+          "inboundStorage": 2.5,
+          "contingency": 6.194461699346405,
+          "recurringPerServing": 83.62523294117646,
+          "recurringPerTin": 1254.378494117647,
+          "recurringBatch": 1254378.494117647,
+          "grossIngredientBatchKg": 533.3333333333334
+        }
+      ],
+      "firstLaunchPerServing": 73.23223739495799,
+      "packagingSetupPerServing": 3,
+      "developmentPerServing": 20,
+      "fiveHundredGramTin": {
+        "scenario": "Base planning case",
+        "ingredientLines": [
+          {
+            "id": "pea",
+            "grams": 17.85,
+            "ratePerKg": 480,
+            "cost": 8.568
+          },
+          {
+            "id": "rice",
+            "grams": 7.65,
+            "ratePerKg": 420,
+            "cost": 3.213
+          },
+          {
+            "id": "fibre",
+            "grams": 3.15,
+            "ratePerKg": 650,
+            "cost": 2.0475
+          },
+          {
+            "id": "fat",
+            "grams": 3,
+            "ratePerKg": 1200,
+            "cost": 3.6
+          },
+          {
+            "id": "coffee",
+            "grams": 1,
+            "ratePerKg": 4000,
+            "cost": 4
+          },
+          {
+            "id": "flavour",
+            "grams": 1,
+            "ratePerKg": 5000,
+            "cost": 5
+          },
+          {
+            "id": "lecithin",
+            "grams": 0.2,
+            "ratePerKg": 1500,
+            "cost": 0.3
+          },
+          {
+            "id": "sweetener",
+            "grams": 0.12,
+            "ratePerKg": 1500,
+            "cost": 0.18
+          },
+          {
+            "id": "salt",
+            "grams": 0.03,
+            "ratePerKg": 40,
+            "cost": 0.0012
+          }
+        ],
+        "nominalIngredients": 26.9097,
+        "fillOverage": 0.1076388000000001,
+        "processLoss": 0.5513742612244898,
+        "packagingSetCost": 155,
+        "packagingSets": 1031,
+        "packaging": 10.866740000000002,
+        "conversion": 5.1204,
+        "routineQa": 3.06,
+        "inboundStorage": 1.5,
+        "contingency": 2.405792653061225,
+        "recurringPerServing": 50.521645714285725,
+        "recurringPerTin": 742.9653781512607,
+        "recurringBatch": 742965.3781512607,
+        "grossIngredientBatchKg": 512.2448979591837
+      }
+    },
+    {
+      "id": "R4",
+      "name": "Pea and yeast 70 to 30",
+      "conditionalYeastPrice": true,
+      "calculatedMainProteinGrams": 20.400000000000002,
+      "activeSucraloseMg": 12,
+      "fibreIngredientContributionGrams": 2.835,
+      "batchGrams": {
+        "pea": 525,
+        "yeast": 225,
+        "fibre": 92.64705882352942,
+        "fat": 88.23529411764706,
+        "coffee": 29.41176470588235,
+        "flavour": 29.41176470588235,
+        "lecithin": 5.88235294117647,
+        "sweetener": 3.5294117647058822,
+        "salt": 0.8823529411764706
+      },
+      "scenarios": [
+        {
+          "scenario": "Low planning case",
+          "ingredientLines": [
+            {
+              "id": "pea",
+              "grams": 17.85,
+              "ratePerKg": 480,
+              "cost": 8.568
+            },
+            {
+              "id": "yeast",
+              "grams": 7.65,
+              "ratePerKg": 899,
+              "cost": 6.877350000000001
+            },
+            {
+              "id": "fibre",
+              "grams": 3.15,
+              "ratePerKg": 500,
+              "cost": 1.575
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 800,
+              "cost": 2.4
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 2500,
+              "cost": 2.5
+            },
+            {
+              "id": "flavour",
+              "grams": 1,
+              "ratePerKg": 3500,
+              "cost": 3.5
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 1000,
+              "cost": 0.2
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 1000,
+              "cost": 0.12
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 30,
+              "cost": 0.0008999999999999999
+            }
+          ],
+          "nominalIngredients": 25.74125,
+          "fillOverage": 0.1009460784313722,
+          "processLoss": 0.26103228362051895,
+          "packagingSetCost": 102,
+          "packagingSets": 1021,
+          "packaging": 6.9428,
+          "conversion": 3.4133333333333336,
+          "routineQa": 2,
+          "inboundStorage": 1,
+          "contingency": 1.1837808508615568,
+          "recurringPerServing": 40.643142546246786,
+          "recurringPerTin": 609.6471381937018,
+          "recurringBatch": 609647.1381937019,
+          "grossIngredientBatchKg": 517.1717171717172
+        },
+        {
+          "scenario": "Base planning case",
+          "ingredientLines": [
+            {
+              "id": "pea",
+              "grams": 17.85,
+              "ratePerKg": 480,
+              "cost": 8.568
+            },
+            {
+              "id": "yeast",
+              "grams": 7.65,
+              "ratePerKg": 899,
+              "cost": 6.877350000000001
+            },
+            {
+              "id": "fibre",
+              "grams": 3.15,
+              "ratePerKg": 650,
+              "cost": 2.0475
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 1200,
+              "cost": 3.6
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 4000,
+              "cost": 4
+            },
+            {
+              "id": "flavour",
+              "grams": 1,
+              "ratePerKg": 5000,
+              "cost": 5
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 1500,
+              "cost": 0.3
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 1500,
+              "cost": 0.18
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 40,
+              "cost": 0.0012
+            }
+          ],
+          "nominalIngredients": 30.574050000000003,
+          "fillOverage": 0.11989823529411724,
+          "processLoss": 0.6264071068427371,
+          "packagingSetCost": 155,
+          "packagingSets": 1031,
+          "packaging": 10.653666666666668,
+          "conversion": 5.12,
+          "routineQa": 3,
+          "inboundStorage": 1.5,
+          "contingency": 2.579701100440176,
+          "recurringPerServing": 54.173723109243696,
+          "recurringPerTin": 812.6058466386554,
+          "recurringBatch": 812605.8466386554,
+          "grossIngredientBatchKg": 522.4489795918367
+        },
+        {
+          "scenario": "High planning case",
+          "ingredientLines": [
+            {
+              "id": "pea",
+              "grams": 17.85,
+              "ratePerKg": 800,
+              "cost": 14.280000000000001
+            },
+            {
+              "id": "yeast",
+              "grams": 7.65,
+              "ratePerKg": 1600,
+              "cost": 12.24
+            },
+            {
+              "id": "fibre",
+              "grams": 3.15,
+              "ratePerKg": 1000,
+              "cost": 3.15
+            },
+            {
+              "id": "fat",
+              "grams": 3,
+              "ratePerKg": 1800,
+              "cost": 5.4
+            },
+            {
+              "id": "coffee",
+              "grams": 1,
+              "ratePerKg": 6000,
+              "cost": 6
+            },
+            {
+              "id": "flavour",
+              "grams": 1,
+              "ratePerKg": 8000,
+              "cost": 8
+            },
+            {
+              "id": "lecithin",
+              "grams": 0.2,
+              "ratePerKg": 2200,
+              "cost": 0.44
+            },
+            {
+              "id": "sweetener",
+              "grams": 0.12,
+              "ratePerKg": 2500,
+              "cost": 0.3
+            },
+            {
+              "id": "salt",
+              "grams": 0.03,
+              "ratePerKg": 60,
+              "cost": 0.0017999999999999997
+            }
+          ],
+          "nominalIngredients": 49.8118,
+          "fillOverage": 0.19534039215686205,
+          "processLoss": 2.083630849673203,
+          "packagingSetCost": 240,
+          "packagingSets": 1053,
+          "packaging": 16.848,
+          "conversion": 8.192,
+          "routineQa": 5,
+          "inboundStorage": 2.5,
+          "contingency": 6.770461699346406,
+          "recurringPerServing": 91.40123294117649,
+          "recurringPerTin": 1371.0184941176474,
+          "recurringBatch": 1371018.4941176474,
+          "grossIngredientBatchKg": 533.3333333333334
+        }
+      ],
+      "firstLaunchPerServing": 77.1737231092437,
+      "packagingSetupPerServing": 3,
+      "developmentPerServing": 20,
+      "fiveHundredGramTin": {
+        "scenario": "Base planning case",
+        "ingredientLines": [
+          {
+            "id": "pea",
+            "grams": 17.85,
+            "ratePerKg": 480,
+            "cost": 8.568
+          },
+          {
+            "id": "yeast",
+            "grams": 7.65,
+            "ratePerKg": 899,
+            "cost": 6.877350000000001
+          },
+          {
+            "id": "fibre",
+            "grams": 3.15,
+            "ratePerKg": 650,
+            "cost": 2.0475
+          },
+          {
+            "id": "fat",
+            "grams": 3,
+            "ratePerKg": 1200,
+            "cost": 3.6
+          },
+          {
+            "id": "coffee",
+            "grams": 1,
+            "ratePerKg": 4000,
+            "cost": 4
+          },
+          {
+            "id": "flavour",
+            "grams": 1,
+            "ratePerKg": 5000,
+            "cost": 5
+          },
+          {
+            "id": "lecithin",
+            "grams": 0.2,
+            "ratePerKg": 1500,
+            "cost": 0.3
+          },
+          {
+            "id": "sweetener",
+            "grams": 0.12,
+            "ratePerKg": 1500,
+            "cost": 0.18
+          },
+          {
+            "id": "salt",
+            "grams": 0.03,
+            "ratePerKg": 40,
+            "cost": 0.0012
+          }
+        ],
+        "nominalIngredients": 30.574050000000003,
+        "fillOverage": 0.12229620000000012,
+        "processLoss": 0.6264560448979594,
+        "packagingSetCost": 155,
+        "packagingSets": 1031,
+        "packaging": 10.866740000000002,
+        "conversion": 5.1204,
+        "routineQa": 3.06,
+        "inboundStorage": 1.5,
+        "contingency": 2.593497112244899,
+        "recurringPerServing": 54.46343935714287,
+        "recurringPerTin": 800.9329317226892,
+        "recurringBatch": 800932.9317226892,
+        "grossIngredientBatchKg": 512.2448979591837
+      }
+    }
+  ]
+}

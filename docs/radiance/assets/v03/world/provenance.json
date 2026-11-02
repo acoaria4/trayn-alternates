@@ -1,0 +1,19 @@
+{
+  "created": "2026-10-29",
+  "tool": "Built-in image_gen.imagegen",
+  "referencePackaging": "radiance-v01/assets/product/packaging.webp",
+  "prompts": [
+    {
+      "key": "world",
+      "prompt": "Use case: ads-marketing. Original surreal luxury wellness brand environment for Radiance, landscape 3:2 editorial photograph / physically based cinematic 3D render. An impossibly beautiful ivory desert of fluid sculpted cream-colored dunes, one monumental brushed champagne-gold circular ring standing at a slight angle in the center background like a sun portal, diffuse golden sunlight behind it, pale butter sky, delicate warm mist along the dune floor. Low camera looking into the scene. Ring occupies center 50% width and 70% height, with open space in its center for a product to be composited later. Tactile satin ivory sand, fine ripples and luminous materials; premium museum installation meets extraterrestrial sunrise. Almost monochrome ivory, pale latte, champagne and honey gold. Astonishing art direction, grounded photographic material detail. No product, no people, no plants, no kitchen, no text or letters, no watermark. Keep the top 20% and bottom 15% relatively uncluttered for web typography. This is one continuous full-bleed hero background, not a website screenshot."
+    },
+    {
+      "key": "floating",
+      "prompt": "Use case: identity-preserve. Make an isolated photorealistic product cutout of the exact Radiance Cafe Latte concept tin in the reference image. Preserve the ivory botanical label, champagne lid and base, TRAYN Nutrition logo, flowing Radiance lettering, sunburst, engraved latte artwork and visible concept wording faithfully. Show the whole closed tin at a very subtle 3/4 angle, camera slightly above lid level, tilted 7 degrees clockwise as if floating in zero gravity. One tin only, large centered product, adequate transparent margin around all edges. Refined studio sunlight from upper left and natural soft reflected gold on the right, crisp real metal and paper, realistic proportions. No surface, no pedestal, no cast shadow beneath it, no room, no background, no floating fragments. Truly transparent background. This cutout will be layered and animated over a surreal ivory landscape."
+    },
+    {
+      "key": "latte",
+      "prompt": "Use case: ads-marketing. Original surreal premium Cafe Latte campaign image for the Radiance website. Landscape 3:2 composition, cinematic photorealistic 3D still life. One beautiful wide handmade ivory ceramic cup filled with coffee and pale latte crema, floating a little above a sculpted pale cream desert dune, seen from slightly above and front. A luminous flowing ribbon of satin champagne-gold metal arcs high through the air behind the cup, like a single elegant orbit of sunlight. A few tiny coffee beans float near the cup at different distances, never cluttered. Rounded cream dunes, warm butter sky and extraordinary golden-hour side lighting, tactile ceramic, tiny realistic glaze speckles, realistic fluid surface. Art installation in a world made of light, elegant impossible physics, restrained ivory / pale latte / honey palette. Large focal cup occupies right-center, left third has calm negative space for typography. No packaged products, no people, no hands, no text, no logos, no typography, no watermark, no kitchen, no collage."
+    }
+  ]
+}

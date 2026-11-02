@@ -1,4 +1,4 @@
-name: Publish Nurture to GitHub Pages
+name: Publish TRAYN alternates to GitHub Pages
 
 # A deliberate manual release; enabling this file alone never publishes the site.
 on:

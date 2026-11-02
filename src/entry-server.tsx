@@ -1,3 +1,7 @@
 import { renderToString } from 'react-dom/server';
-import App from './App';
-export function render() { return renderToString(<App />); }
+import Picker from './picker/Picker';
+
+export function renderPicker() { return renderToString(<Picker />); }
+export { render as renderNurture } from '../nurture-v01/src/entry-server';
+export { render as renderRadiance } from '../radiance-v01/src/entry-server';
+export { render as renderRadianceV3 } from '../radiance-v03/src/entry-server';
