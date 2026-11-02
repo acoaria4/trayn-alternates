@@ -74,18 +74,18 @@
     },
     {
       "path": "icons/arrow-right.svg",
-      "bytes": 363,
-      "sha256": "14f696a58481c9beda41e80072caf23018a3942001235d67dc28e0d06a5e0122"
+      "bytes": 362,
+      "sha256": "fcc9b2e7da6af5e7f1284361a99c14dee06fa051e0a683fc1b560a52bdcdd55a"
     },
     {
       "path": "icons/arrow-up-right.svg",
-      "bytes": 358,
-      "sha256": "76a4f7f6858770c40934161a8e415874e8cc11d4da62719fb9f2df0e14c58bfa"
+      "bytes": 357,
+      "sha256": "6c6c8b7befa14bcdd68a16de1e76765a9bf6b9baf3631bf1cb400e5a08dcef12"
     },
     {
       "path": "icons/ATTRIBUTION.txt",
-      "bytes": 439,
-      "sha256": "b4881e6a063935a59b655c09b87ddf04a2f57568505b4b90cf3a3aaff58817a6"
+      "bytes": 438,
+      "sha256": "f4015674ee9cc6258aa7ab6bf4840941ba01bcce8c3886da369eb0be5451e578"
     },
     {
       "path": "social/social-preview.jpg",
